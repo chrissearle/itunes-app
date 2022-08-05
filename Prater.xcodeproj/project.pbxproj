@@ -11,6 +11,11 @@
 		83FB738A289D1C54006A0B75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB7389289D1C54006A0B75 /* ContentView.swift */; };
 		83FB738C289D1C58006A0B75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83FB738B289D1C58006A0B75 /* Assets.xcassets */; };
 		83FB738F289D1C58006A0B75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83FB738E289D1C58006A0B75 /* Preview Assets.xcassets */; };
+		83FB7399289D1D3D006A0B75 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB7398289D1D3D006A0B75 /* Album.swift */; };
+		83FB739B289D1D67006A0B75 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB739A289D1D67006A0B75 /* AlbumListViewModel.swift */; };
+		83FB739D289D2122006A0B75 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB739C289D2121006A0B75 /* Song.swift */; };
+		83FB739F289D2128006A0B75 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB739E289D2128006A0B75 /* Movie.swift */; };
+		83FB73A1289D2A29006A0B75 /* AlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB73A0289D2A29006A0B75 /* AlbumListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		83FB7389289D1C54006A0B75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		83FB738B289D1C58006A0B75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83FB738E289D1C58006A0B75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		83FB7398289D1D3D006A0B75 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		83FB739A289D1D67006A0B75 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
+		83FB739C289D2121006A0B75 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		83FB739E289D2128006A0B75 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		83FB73A0289D2A29006A0B75 /* AlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,9 @@
 		83FB7386289D1C54006A0B75 /* Prater */ = {
 			isa = PBXGroup;
 			children = (
+				83FB7397289D1D28006A0B75 /* model */,
+				83FB7396289D1D15006A0B75 /* viewmodel */,
+				83FB7395289D1D05006A0B75 /* view */,
 				83FB7387289D1C54006A0B75 /* PraterApp.swift */,
 				83FB7389289D1C54006A0B75 /* ContentView.swift */,
 				83FB738B289D1C58006A0B75 /* Assets.xcassets */,
@@ -65,6 +78,32 @@
 				83FB738E289D1C58006A0B75 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		83FB7395289D1D05006A0B75 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				83FB73A0289D2A29006A0B75 /* AlbumListView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		83FB7396289D1D15006A0B75 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				83FB739A289D1D67006A0B75 /* AlbumListViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		83FB7397289D1D28006A0B75 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				83FB7398289D1D3D006A0B75 /* Album.swift */,
+				83FB739C289D2121006A0B75 /* Song.swift */,
+				83FB739E289D2128006A0B75 /* Movie.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83FB739B289D1D67006A0B75 /* AlbumListViewModel.swift in Sources */,
 				83FB738A289D1C54006A0B75 /* ContentView.swift in Sources */,
+				83FB739F289D2128006A0B75 /* Movie.swift in Sources */,
 				83FB7388289D1C54006A0B75 /* PraterApp.swift in Sources */,
+				83FB7399289D1D3D006A0B75 /* Album.swift in Sources */,
+				83FB739D289D2122006A0B75 /* Song.swift in Sources */,
+				83FB73A1289D2A29006A0B75 /* AlbumListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,20 +1,17 @@
 //
-//  AlbumListViewModel.swift
+//  MovieListViewModel.swift
 //  Prater
 //
-//  Created by Chris Searle on 05/08/2022.
+//  Created by Chris Searle on 21/09/2022.
 //
 
 import Foundation
 import Combine
 
-class AlbumListViewModel: ObservableObject {    
+class MovieListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
-    @Published var albums: [Album] = [Album]()
+    @Published var movies: [Movie] = [Movie]()
     @Published var state: FetchState = .good
-    
-    let limit: Int = 20
-    var page: Int = 0
     
     private let service = ApiService()
     
@@ -25,13 +22,12 @@ class AlbumListViewModel: ObservableObject {
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
-                self?.albums = []
+                self?.movies = []
                 self?.state = .good
-                self?.page = 0
                 self?.fetch(for: term)
             }.store(in: &subscriptions)
     }
-    
+
     func loadMore() {
         fetch(for: searchTerm)
     }
@@ -47,16 +43,13 @@ class AlbumListViewModel: ObservableObject {
         
         state = .isLoading
         
-        service.fetchAlbums(for: searchTerm, limit: limit, page: page) { [weak self] result in
+        service.fetchMovies(for: searchTerm) { [weak self] result in
             DispatchQueue.main.async {
                 switch (result) {
                 case .success(let results):
-                    for album in results.results {
-                        self?.albums.append(album)
-                    }
-                    self?.page += 1
-                    
-                    self?.state = (results.results.count == self?.limit) ? .good : .loadedAll
+                    self?.movies = results.results
+
+                    self?.state = .loadedAll
                     
                 case .failure(let error):
                     self?.state = .error("Loading failed \(error.localizedDescription)")

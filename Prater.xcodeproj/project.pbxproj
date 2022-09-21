@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8304F5BA28DB2B5500A80930 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5B928DB2B5500A80930 /* ApiError.swift */; };
+		8304F5BC28DB30FC00A80930 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5BB28DB30FC00A80930 /* ApiService.swift */; };
+		8304F5BE28DB335D00A80930 /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5BD28DB335D00A80930 /* SongListViewModel.swift */; };
+		8304F5C028DB336B00A80930 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5BF28DB336B00A80930 /* MovieListViewModel.swift */; };
+		8304F5C228DB340000A80930 /* FetchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5C128DB340000A80930 /* FetchState.swift */; };
+		8304F5C728DB35D100A80930 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5C628DB35D100A80930 /* MovieListView.swift */; };
+		8304F5C928DB368F00A80930 /* MovieSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5C828DB368F00A80930 /* MovieSearchView.swift */; };
+		8304F5CB28DB390D00A80930 /* SongSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5CA28DB390D00A80930 /* SongSearchView.swift */; };
+		8304F5CD28DB395C00A80930 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5CC28DB395C00A80930 /* SongListView.swift */; };
 		83FB7388289D1C54006A0B75 /* PraterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB7387289D1C54006A0B75 /* PraterApp.swift */; };
 		83FB738A289D1C54006A0B75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83FB7389289D1C54006A0B75 /* ContentView.swift */; };
 		83FB738C289D1C58006A0B75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83FB738B289D1C58006A0B75 /* Assets.xcassets */; };
@@ -20,6 +29,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8304F5B928DB2B5500A80930 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		8304F5BB28DB30FC00A80930 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		8304F5BD28DB335D00A80930 /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
+		8304F5BF28DB336B00A80930 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		8304F5C128DB340000A80930 /* FetchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchState.swift; sourceTree = "<group>"; };
+		8304F5C628DB35D100A80930 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		8304F5C828DB368F00A80930 /* MovieSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchView.swift; sourceTree = "<group>"; };
+		8304F5CA28DB390D00A80930 /* SongSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchView.swift; sourceTree = "<group>"; };
+		8304F5CC28DB395C00A80930 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
 		83FB7384289D1C54006A0B75 /* Prater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83FB7387289D1C54006A0B75 /* PraterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PraterApp.swift; sourceTree = "<group>"; };
 		83FB7389289D1C54006A0B75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +62,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8304F5C328DB35A100A80930 /* movie */ = {
+			isa = PBXGroup;
+			children = (
+				8304F5C628DB35D100A80930 /* MovieListView.swift */,
+				8304F5C828DB368F00A80930 /* MovieSearchView.swift */,
+			);
+			path = movie;
+			sourceTree = "<group>";
+		};
+		8304F5C428DB35A700A80930 /* album */ = {
+			isa = PBXGroup;
+			children = (
+				83FB73A0289D2A29006A0B75 /* AlbumListView.swift */,
+				83FB73A228A39249006A0B75 /* AlbumSearchView.swift */,
+			);
+			path = album;
+			sourceTree = "<group>";
+		};
+		8304F5C528DB35AC00A80930 /* song */ = {
+			isa = PBXGroup;
+			children = (
+				8304F5CA28DB390D00A80930 /* SongSearchView.swift */,
+				8304F5CC28DB395C00A80930 /* SongListView.swift */,
+			);
+			path = song;
+			sourceTree = "<group>";
+		};
 		83FB737B289D1C54006A0B75 = {
 			isa = PBXGroup;
 			children = (
@@ -85,8 +130,9 @@
 		83FB7395289D1D05006A0B75 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				83FB73A0289D2A29006A0B75 /* AlbumListView.swift */,
-				83FB73A228A39249006A0B75 /* AlbumSearchView.swift */,
+				8304F5C528DB35AC00A80930 /* song */,
+				8304F5C428DB35A700A80930 /* album */,
+				8304F5C328DB35A100A80930 /* movie */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -95,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				83FB739A289D1D67006A0B75 /* AlbumListViewModel.swift */,
+				8304F5BB28DB30FC00A80930 /* ApiService.swift */,
+				8304F5BD28DB335D00A80930 /* SongListViewModel.swift */,
+				8304F5BF28DB336B00A80930 /* MovieListViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -105,6 +154,8 @@
 				83FB7398289D1D3D006A0B75 /* Album.swift */,
 				83FB739C289D2121006A0B75 /* Song.swift */,
 				83FB739E289D2128006A0B75 /* Movie.swift */,
+				8304F5B928DB2B5500A80930 /* ApiError.swift */,
+				8304F5C128DB340000A80930 /* FetchState.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -179,14 +230,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8304F5C928DB368F00A80930 /* MovieSearchView.swift in Sources */,
 				83FB739B289D1D67006A0B75 /* AlbumListViewModel.swift in Sources */,
+				8304F5C728DB35D100A80930 /* MovieListView.swift in Sources */,
 				83FB738A289D1C54006A0B75 /* ContentView.swift in Sources */,
+				8304F5BE28DB335D00A80930 /* SongListViewModel.swift in Sources */,
 				83FB73A328A39249006A0B75 /* AlbumSearchView.swift in Sources */,
 				83FB739F289D2128006A0B75 /* Movie.swift in Sources */,
+				8304F5CB28DB390D00A80930 /* SongSearchView.swift in Sources */,
 				83FB7388289D1C54006A0B75 /* PraterApp.swift in Sources */,
+				8304F5BA28DB2B5500A80930 /* ApiError.swift in Sources */,
+				8304F5BC28DB30FC00A80930 /* ApiService.swift in Sources */,
 				83FB7399289D1D3D006A0B75 /* Album.swift in Sources */,
+				8304F5C228DB340000A80930 /* FetchState.swift in Sources */,
 				83FB739D289D2122006A0B75 /* Song.swift in Sources */,
+				8304F5CD28DB395C00A80930 /* SongListView.swift in Sources */,
 				83FB73A1289D2A29006A0B75 /* AlbumListView.swift in Sources */,
+				8304F5C028DB336B00A80930 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

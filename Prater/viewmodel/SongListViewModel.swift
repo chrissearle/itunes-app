@@ -1,16 +1,16 @@
 //
-//  AlbumListViewModel.swift
+//  SongListViewModel.swift
 //  Prater
 //
-//  Created by Chris Searle on 05/08/2022.
+//  Created by Chris Searle on 21/09/2022.
 //
 
 import Foundation
 import Combine
 
-class AlbumListViewModel: ObservableObject {    
+class SongListViewModel: ObservableObject {
     @Published var searchTerm: String = ""
-    @Published var albums: [Album] = [Album]()
+    @Published var songs: [Song] = [Song]()
     @Published var state: FetchState = .good
     
     let limit: Int = 20
@@ -25,7 +25,7 @@ class AlbumListViewModel: ObservableObject {
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
-                self?.albums = []
+                self?.songs = []
                 self?.state = .good
                 self?.page = 0
                 self?.fetch(for: term)
@@ -47,12 +47,12 @@ class AlbumListViewModel: ObservableObject {
         
         state = .isLoading
         
-        service.fetchAlbums(for: searchTerm, limit: limit, page: page) { [weak self] result in
+        service.fetchSongs(for: searchTerm, limit: limit, page: page) { [weak self] result in
             DispatchQueue.main.async {
                 switch (result) {
                 case .success(let results):
-                    for album in results.results {
-                        self?.albums.append(album)
+                    for song in results.results {
+                        self?.songs.append(song)
                     }
                     self?.page += 1
                     

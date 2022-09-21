@@ -9,8 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        TabView {
             AlbumSearchView()
+                .tabItem{
+                    Label("Albums", systemImage: "music.note")
+                }
+
+            SongSearchView()
+                .tabItem {
+                    Label("Songs", systemImage: "up")
+                }
+
+            
+            MovieSearchView()
+                .tabItem {
+                    Label("Movies", systemImage: "tv")
+                }
         }
     }
 }

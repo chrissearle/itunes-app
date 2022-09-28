@@ -22,16 +22,21 @@ class SongListViewModel: ObservableObject {
     
     init() {
         $searchTerm
+            .removeDuplicates()
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
-                self?.songs = []
-                self?.state = .good
-                self?.page = 0
+                self?.clear()
                 self?.fetch(for: term)
             }.store(in: &subscriptions)
     }
     
+    private func clear() {
+        songs = []
+        state = .good
+        page = 0
+    }
+
     func loadMore() {
         fetch(for: searchTerm)
     }

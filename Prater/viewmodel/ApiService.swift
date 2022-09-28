@@ -7,12 +7,6 @@
 
 import Foundation
 
-enum EntityType: String {
-    case album
-    case song
-    case movie
-}
-
 class ApiService {
     func fetchAlbums(for searchTerm: String, limit: Int = 20, page: Int = 0, completion: @escaping(Result<AlbumResult, ApiError>) -> Void) {
         let url = createURL(for: searchTerm, type: .album, limit: limit, offset: page * limit)

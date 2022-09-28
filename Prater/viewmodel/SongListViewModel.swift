@@ -36,7 +36,7 @@ class SongListViewModel: ObservableObject {
         state = .good
         page = 0
     }
-
+    
     func loadMore() {
         fetch(for: searchTerm)
     }
@@ -69,4 +69,16 @@ class SongListViewModel: ObservableObject {
             }
         }
     }
+    
+    static func example() -> SongListViewModel {
+        let viewModel = SongListViewModel()
+        
+        viewModel.songs = [
+            Song.example(),
+            Song.example2()
+        ]
+        
+        return viewModel
+    }
 }
+

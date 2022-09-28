@@ -62,4 +62,14 @@ class MovieListViewModel: ObservableObject {
             }
         }
     }
+    
+    static func example() -> MovieListViewModel {
+        let viewModel = MovieListViewModel()
+        
+        viewModel.movies = [
+            Movie.example()
+        ]
+        
+        return viewModel
+    }
 }

@@ -22,7 +22,7 @@ struct ContentView: View {
 
             SongSearchView()
                 .tabItem {
-                    Label("Songs", systemImage: "up")
+                    Label("Songs", systemImage: "music.mic")
                 }
 
             

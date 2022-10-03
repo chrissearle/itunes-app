@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83012DD828EB358D00809337 /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83012DD728EB358D00809337 /* AlbumDetailView.swift */; };
+		83012DDA28EB3BA100809337 /* SongsForAlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83012DD928EB3BA100809337 /* SongsForAlbumListViewModel.swift */; };
+		83012DDC28EB3ED200809337 /* SongsForAlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83012DDB28EB3ED200809337 /* SongsForAlbumListView.swift */; };
 		8304F5BA28DB2B5500A80930 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5B928DB2B5500A80930 /* ApiError.swift */; };
 		8304F5BC28DB30FC00A80930 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5BB28DB30FC00A80930 /* ApiService.swift */; };
 		8304F5BE28DB335D00A80930 /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304F5BD28DB335D00A80930 /* SongListViewModel.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83012DD728EB358D00809337 /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
+		83012DD928EB3BA100809337 /* SongsForAlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsForAlbumListViewModel.swift; sourceTree = "<group>"; };
+		83012DDB28EB3ED200809337 /* SongsForAlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsForAlbumListView.swift; sourceTree = "<group>"; };
 		8304F5B928DB2B5500A80930 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		8304F5BB28DB30FC00A80930 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		8304F5BD28DB335D00A80930 /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
@@ -106,6 +112,8 @@
 				83FB73A228A39249006A0B75 /* AlbumSearchView.swift */,
 				83B5F63828E4AE6E00C1DE01 /* AlbumRowView.swift */,
 				83B5F64028E4B81A00C1DE01 /* AlbumSectionView.swift */,
+				83012DD728EB358D00809337 /* AlbumDetailView.swift */,
+				83012DDB28EB3ED200809337 /* SongsForAlbumListView.swift */,
 			);
 			path = album;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 				83FB739A289D1D67006A0B75 /* AlbumListViewModel.swift */,
 				8304F5BD28DB335D00A80930 /* SongListViewModel.swift */,
 				8304F5BF28DB336B00A80930 /* MovieListViewModel.swift */,
+				83012DD928EB3BA100809337 /* SongsForAlbumListViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -285,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83012DDC28EB3ED200809337 /* SongsForAlbumListView.swift in Sources */,
 				8304F5C928DB368F00A80930 /* MovieSearchView.swift in Sources */,
 				83B5F63F28E4B80C00C1DE01 /* MovieSectionView.swift in Sources */,
 				83FB739B289D1D67006A0B75 /* AlbumListViewModel.swift in Sources */,
@@ -310,6 +320,8 @@
 				83B5F63928E4AE6E00C1DE01 /* AlbumRowView.swift in Sources */,
 				83B5F63228E4A05200C1DE01 /* SongRowView.swift in Sources */,
 				83B5F63B28E4AFA400C1DE01 /* BuyButtonView.swift in Sources */,
+				83012DDA28EB3BA100809337 /* SongsForAlbumListViewModel.swift in Sources */,
+				83012DD828EB358D00809337 /* AlbumDetailView.swift in Sources */,
 				83B5F64128E4B81A00C1DE01 /* AlbumSectionView.swift in Sources */,
 				83FB73A1289D2A29006A0B75 /* AlbumListView.swift in Sources */,
 				837044CA28E4308F00F5AE4F /* EntityType.swift in Sources */,
@@ -371,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +437,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

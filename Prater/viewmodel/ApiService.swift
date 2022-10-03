@@ -17,6 +17,11 @@ class ApiService {
         let url = createURL(for: searchTerm, type: .song, limit: limit, offset: page * limit)
         fetch(type: SongResult.self, url: url, completion: completion)
     }
+    
+    func fetchSongs(for albumId: Int, completion: @escaping(Result<SongResult, ApiError>) -> Void) {
+        let url = createURL(for: albumId, type: .song)
+        fetch(type: SongResult.self, url: url, completion: completion)
+    }
 
     func fetchMovies(for searchTerm: String, completion: @escaping(Result<MovieResult, ApiError>) -> Void) {
         let url = createURL(for: searchTerm, type: .movie, limit: nil, offset: nil)
@@ -59,6 +64,21 @@ class ApiService {
             queryItems.append(URLQueryItem(name: "offset", value: String(offset)))
         }
         
+        var components = URLComponents(string: baseURL)
+        
+        components?.queryItems = queryItems
+        
+        return components?.url
+    }
+    
+    private func createURL(for id: Int, type: EntityType) -> URL? {
+        let baseURL = "https://itunes.apple.com/lookup"
+        
+        let queryItems = [
+            URLQueryItem(name: "id", value: String(id)),
+            URLQueryItem(name: "entity", value: type.rawValue)
+        ]
+
         var components = URLComponents(string: baseURL)
         
         components?.queryItems = queryItems

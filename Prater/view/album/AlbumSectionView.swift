@@ -14,15 +14,19 @@ struct AlbumSectionView: View {
         ScrollView(.horizontal) {
             LazyHStack(alignment: .top) {
                 ForEach(albums) { album in
-                    VStack(alignment: .leading) {
-                        ImageLoadingView(urlString: album.artworkUrl100, size: CGSize(width: 100, height: 100))
-                        Text(album.collectionName)
-                        Text(album.artistName)
-                            .foregroundColor(.gray)
+                    NavigationLink {
+                        AlbumDetailView(album: album)
+                    } label: {
+                        VStack(alignment: .leading) {
+                            ImageLoadingView(urlString: album.artworkUrl100, size: CGSize(width: 100, height: 100))
+                            Text(album.collectionName)
+                            Text(album.artistName)
+                                .foregroundColor(.gray)
+                        }
+                        .lineLimit(2)
+                        .frame(width: 100)
+                        .font(.caption)
                     }
-                    .lineLimit(2)
-                    .frame(width: 100)
-                    .font(.caption)
                 }
             }
             .padding([.horizontal, .bottom])
